@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Fetch Data From Postgres</title>
+    </head>
+    <body>
+        <center>
+            <h1>Django Title:</h1>
+            <h2>From Docker-compose:</h2>
+            <p>Hello World!</p>
+            <hr/>
+
+            <table border="1">
+                <tr>
+                    <th>Employee Id</th>
+                    <th>Employee Name</th>
+                    <th>Email</th>
+                </tr>
+
+                <!-- {{ results }} -->
+
+                {% for result in results %}
+                <tr>
+                    <td>{{ result.empid }}</td>
+                    <td>{{ result.empname }}</td>
+                    <td>{{ result.email }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </center>
+    </body>
+</html>
